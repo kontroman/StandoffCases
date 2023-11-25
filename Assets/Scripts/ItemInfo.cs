@@ -9,4 +9,6 @@ public class ItemInfo : ScriptableObject
     public int Price;
     public Sprite Sprite;
     public RarityType RarityType;
+    public WeaponType WeaponType;
+    public Collections Collection;
 }

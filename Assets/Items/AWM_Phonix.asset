@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: AWM_Phonix
   m_EditorClassIdentifier: 
   Name: Phonix
-  Price: 1000000
-  Sprite: {fileID: 21300000, guid: a80b6386a63bc4543836e6dc01983e0a, type: 3}
+  Price: 100
+  Sprite: {fileID: 21300000, guid: f8ed8f09f50ecc74799b9b13bc039c40, type: 3}
   RarityType: 2
+  WeaponType: 24
+  Collection: 0
