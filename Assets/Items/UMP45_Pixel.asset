@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: UMP45_Pixel
   m_EditorClassIdentifier: 
   Name: Pixel
-  Price: 0
-  Sprite: {fileID: 0}
+  Price: 0.5
+  Sprite: {fileID: 21300000, guid: bb5adfc35ca41994e8ff4d3dd1f31627, type: 3}
   RarityType: 0
+  WeaponType: 1
+  Collection: 0

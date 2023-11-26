@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: AKR_Railgun
   m_EditorClassIdentifier: 
   Name: Railgun
-  Price: 0
-  Sprite: {fileID: 0}
+  Price: 580
+  Sprite: {fileID: 21300000, guid: d987d8f4c95a5a14baef9e7d1b38029f, type: 3}
   RarityType: 4
+  WeaponType: 25
+  Collection: 0

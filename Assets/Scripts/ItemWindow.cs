@@ -19,8 +19,19 @@ public class ItemWindow : MonoBehaviour
         UpdateInfo();
     }
 
+    public void SetItemInfo(ItemInfo item)
+    {
+        _itemInfo = item;
+    }
+
     public void UpdateInfo()
     {
+        Image.sprite = _itemInfo.Sprite;
+        Name.text = "Название: ";
+        Rarity.text = "Редкость: ";
+        Collection.text = "Коллекция: ";
+        Price.text = "Цена: ";
+
         Image.sprite = _itemInfo.Sprite;
         Name.text += _itemInfo.WeaponType.ToString() + " " + _itemInfo.Name;
         Rarity.text += _itemInfo.RarityType.ToString();

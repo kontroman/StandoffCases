@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: P90_Ghoul
   m_EditorClassIdentifier: 
   Name: Ghoul
-  Price: 0
-  Sprite: {fileID: 0}
+  Price: 70
+  Sprite: {fileID: 21300000, guid: 6c51c50a688a15746accbbd41ac5d85a, type: 3}
   RarityType: 3
+  WeaponType: 7
+  Collection: 0

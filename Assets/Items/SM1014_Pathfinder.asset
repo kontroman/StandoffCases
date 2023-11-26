@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: SM1014_Pathfinder
   m_EditorClassIdentifier: 
   Name: Pathfinder
-  Price: 0
-  Sprite: {fileID: 0}
+  Price: 24.2
+  Sprite: {fileID: 21300000, guid: 84038dfe16f49f74c8c893e9c719a302, type: 3}
   RarityType: 2
+  WeaponType: 5
+  Collection: 0

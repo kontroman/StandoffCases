@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: G22_Nest
   m_EditorClassIdentifier: 
   Name: Nest
-  Price: 0
-  Sprite: {fileID: 0}
+  Price: 640
+  Sprite: {fileID: 21300000, guid: 43979bc1a9a423a4287f393012953eb9, type: 3}
   RarityType: 5
+  WeaponType: 17
+  Collection: 0

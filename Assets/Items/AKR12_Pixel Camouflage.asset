@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: AKR12_Pixel Camouflage
   m_EditorClassIdentifier: 
   Name: Pixel Camouflage
-  Price: 0
-  Sprite: {fileID: 0}
+  Price: 20
+  Sprite: {fileID: 21300000, guid: f177f6c73805d0049a226940bd29fc72, type: 3}
   RarityType: 2
+  WeaponType: 25
+  Collection: 0

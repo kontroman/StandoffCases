@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: P350_Neon
   m_EditorClassIdentifier: 
   Name: Neon
-  Price: 0
-  Sprite: {fileID: 0}
+  Price: 75
+  Sprite: {fileID: 21300000, guid: aa6bbbca999e6a14b9234ede08a27366, type: 3}
   RarityType: 3
+  WeaponType: 6
+  Collection: 0

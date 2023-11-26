@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Deagle_Blood
   m_EditorClassIdentifier: 
   Name: Blood
-  Price: 0
-  Sprite: {fileID: 0}
+  Price: 3
+  Sprite: {fileID: 21300000, guid: ffe43de84f70e3d49ae690d900924dc1, type: 3}
   RarityType: 1
+  WeaponType: 22
+  Collection: 0

@@ -14,11 +14,12 @@ public class ItemIcon : MonoBehaviour
 
     void Start()
     {
-        UpdateInfo();
+        
     }
 
-    public void UpdateInfo()
+    public void UpdateInfo(ItemInfo itemInfo)
     {
+        _itemInfo = itemInfo;
         Name.text = _itemInfo.WeaponType.ToString() + " " + _itemInfo.Name;
         Image.sprite = _itemInfo.Sprite;
         ChoosePanelColor();

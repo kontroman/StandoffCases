@@ -6,7 +6,7 @@ using UnityEngine;
 public class ItemInfo : ScriptableObject
 {
     public string Name;
-    public int Price;
+    public float Price;
     public Sprite Sprite;
     public RarityType RarityType;
     public WeaponType WeaponType;

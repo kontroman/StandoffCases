@@ -29,4 +29,9 @@ public class ItemDatabase : MonoBehaviour
 
         return null;
     }
+
+    public int GetId(ItemInfo item)
+    {
+        return _data.IndexOf(item);
+    }
 }

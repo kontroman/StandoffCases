@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: M4_Necromancer
   m_EditorClassIdentifier: 
   Name: Necromancer
-  Price: 0
-  Sprite: {fileID: 0}
+  Price: 500
+  Sprite: {fileID: 21300000, guid: efe67670929bc5549aeff8b40f3daea6, type: 3}
   RarityType: 4
+  WeaponType: 15
+  Collection: 0

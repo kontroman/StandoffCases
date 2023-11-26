@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 128195177528953615}
   - component: {fileID: 8005258874784903570}
   - component: {fileID: 6080815299614071996}
-  - component: {fileID: 779616245051597937}
   m_Layer: 5
   m_Name: Iamge
   m_TagString: Untagged
@@ -77,24 +76,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &779616245051597937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 894568030968617440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c55f8db2c4066824881abd0bb3e8f978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Image: {fileID: 6080815299614071996}
-  Name: {fileID: 0}
-  Price: {fileID: 0}
-  Rarity: {fileID: 0}
-  Collection: {fileID: 0}
-  _itemInfo: {fileID: 0}
 --- !u!1 &2981246009254983314
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,8 +169,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -296,7 +277,6 @@ GameObject:
   - component: {fileID: 4662815630661836119}
   - component: {fileID: 4435765883659617089}
   - component: {fileID: 2863402408364146324}
-  - component: {fileID: 165767311820110206}
   m_Layer: 5
   m_Name: Name_Panel
   m_TagString: Untagged
@@ -363,21 +343,3 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &165767311820110206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7848345153757931848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c55f8db2c4066824881abd0bb3e8f978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Image: {fileID: 2863402408364146324}
-  Name: {fileID: 0}
-  Price: {fileID: 0}
-  Rarity: {fileID: 0}
-  Collection: {fileID: 0}
-  _itemInfo: {fileID: 0}

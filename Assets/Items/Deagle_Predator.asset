@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Deagle_Predator
   m_EditorClassIdentifier: 
   Name: Predator
-  Price: 0
-  Sprite: {fileID: 0}
+  Price: 22.75
+  Sprite: {fileID: 21300000, guid: e1ac053992c0ecb469cb5c106884b0e0, type: 3}
   RarityType: 2
+  WeaponType: 22
+  Collection: 0

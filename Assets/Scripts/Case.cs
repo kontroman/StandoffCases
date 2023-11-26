@@ -5,16 +5,33 @@ using UnityEngine;
 public class Case : MonoBehaviour
 {
     public List<int> ItemsId;
+    public bool isFullSetRarieties;
+
+    public GameObject ItemWindow;
 
     void Start()
     {
         //InvokeRepeating("Test", 1f, 1f);
+        Open();
+        Open();
+        Open();
+        Open();
+        Open();
+        Open();
+        Open();
+        Open();
+        Open();
     }
 
-    public void Test()
+    public void Open()
     {
-        var temp = GetItem();
-        Debug.Log(temp.Name + " " + temp.RarityType);
+        var item = GetItem();
+        Inventory.Instance.AddNewItem(item);
+        Debug.Log(item.Name + " " + item.RarityType);
+
+        var temp = ItemWindow.GetComponent<ItemWindow>();
+        temp.SetItemInfo(item);
+        temp.UpdateInfo();
     }
 
     public ItemInfo GetItem()
@@ -38,35 +55,63 @@ public class Case : MonoBehaviour
     private RarityType GetRarityOfItem()
     {
         var res = Random.value;
-        Debug.Log(res);
-        if (res < 0.6)
+
+        if (isFullSetRarieties)
         {
-            return RarityType.Common;
+            if (res < 0.6)
+            {
+                return RarityType.Common;
+            }
+            else if (res < 0.75)
+            {
+                return RarityType.Uncommon;
+            }
+            else if (res < 0.85)
+            {
+                return RarityType.Rare;
+            }
+            else if (res < 0.9)
+            {
+                return RarityType.Epic;
+            }
+            else if (res < 0.93)
+            {
+                return RarityType.Legendary;
+            }
+            else if (res < 0.94)
+            {
+                return RarityType.Arcane;
+            }
+            else
+            {
+                return RarityType.Common;
+            }
         }
-        else if (res < 0.75)
-        {
-            return RarityType.Uncommon;
-        }
-        else if (res < 0.85)
-        {
-            return RarityType.Rare;
-        }
-        else if (res < 0.9)
-        {
-            return RarityType.Epic;
-        }
-        else if (res < 0.93)
-        {
-            return RarityType.Legendary;
-        }
-        else if (res < 0.94)
-        {
-            return RarityType.Arcane;
-        }
+
         else
         {
-            return RarityType.Common;
+            if (res < 0.65)
+            {
+                return RarityType.Rare;
+            }
+            else if (res < 0.85)
+            {
+                return RarityType.Epic;
+            }
+            else if (res < 0.95)
+            {
+                return RarityType.Legendary;
+            }
+            else if (res <= 1)
+            {
+                return RarityType.Arcane;
+            }
+            else
+            {
+                return RarityType.Rare;
+            }
         }
     }
+
 
 }

@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: P90_Radiation
   m_EditorClassIdentifier: 
   Name: Radiation
-  Price: 0
-  Sprite: {fileID: 0}
+  Price: 2.6
+  Sprite: {fileID: 21300000, guid: bd871b5b9b8739f40abc737965fe9af7, type: 3}
   RarityType: 1
+  WeaponType: 7
+  Collection: 0
