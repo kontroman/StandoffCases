@@ -3,19 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
-public class ItemIcon : MonoBehaviour
+public class ItemIcon : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private ItemInfo _itemInfo;
 
     public TextMeshProUGUI Name;
     public Image NamePanel;
     public Image Image;
-
-    void Start()
-    {
-        
-    }
+    public GameObject ItemWindow;
 
     public void UpdateInfo(ItemInfo itemInfo)
     {
@@ -51,5 +48,10 @@ public class ItemIcon : MonoBehaviour
                 NamePanel.color = RarityColors.Instance.ArcaneColor;
                 return;
         }
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        WindowManager.Instance.ShowItemWindow(_itemInfo);
     }
 }

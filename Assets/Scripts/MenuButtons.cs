@@ -10,7 +10,7 @@ public class MenuButtons : MonoBehaviour
 
     public void SwitchPage(int newPageId)
     {
-        if (_actualPageId != newPageId)
+        if (_actualPageId != newPageId && !WindowManager.Instance.ItemWindow.activeSelf)
         {
             foreach (GameObject page in Pages)
                 page.SetActive(false);

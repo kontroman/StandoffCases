@@ -6,32 +6,46 @@ public class InventoryIconsController : MonoBehaviour
 {
     public ItemIcon[] ItemIcons;
 
-    private int _index = 0;
+    [SerializeField] private int _page;
 
-    //тут короче надо разносить индексы для итемов и иконок
     public void UpdateIcons()
     {
-        foreach (ItemIcon icon in ItemIcons)
-            icon.gameObject.SetActive(false);
+        int _index = 0;
 
-        for (int i = _index; i <= _index + ItemIcons.Length; i++)
+        foreach (ItemIcon icon in ItemIcons)
         {
-            ItemIcons[i].gameObject.SetActive(true);
-            ItemIcons[i].UpdateInfo(Inventory.Instance.Items[i]);
+            if(_index + _page * ItemIcons.Length < Inventory.Instance.Items.Count)
+            {
+                icon.gameObject.SetActive(true);
+                icon.UpdateInfo(Inventory.Instance.Items[_index + _page*ItemIcons.Length]);
+                _index++;
+            }
         }
     }
 
     public void NextPageIcons()
     {
-        _index += ItemIcons.Length;
-        UpdateIcons();
+        if (Inventory.Instance.Items.Count - (_page+1) * ItemIcons.Length > 0)
+        {
+            _page++;
+
+            foreach (ItemIcon icon in ItemIcons)
+                icon.gameObject.SetActive(false);
+
+            UpdateIcons();
+        }
     }
 
     public void PrevPageIcons()
     {
-        _index -= ItemIcons.Length;
-        if (_index < 0)
-            _index = 0;
-        UpdateIcons();
+        if (_page > 0)
+        {
+            _page--;
+
+            foreach (ItemIcon icon in ItemIcons)
+                icon.gameObject.SetActive(false);
+
+            UpdateIcons();
+        }
     }
 }

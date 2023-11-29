@@ -9,20 +9,6 @@ public class Case : MonoBehaviour
 
     public GameObject ItemWindow;
 
-    void Start()
-    {
-        //InvokeRepeating("Test", 1f, 1f);
-        Open();
-        Open();
-        Open();
-        Open();
-        Open();
-        Open();
-        Open();
-        Open();
-        Open();
-    }
-
     public void Open()
     {
         var item = GetItem();

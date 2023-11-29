@@ -14,8 +14,9 @@ public class ItemWindow : MonoBehaviour
 
     [SerializeField] private ItemInfo _itemInfo;
 
-    void Start()
+    public void Show(ItemInfo item)
     {
+        SetItemInfo(item);
         UpdateInfo();
     }
 
