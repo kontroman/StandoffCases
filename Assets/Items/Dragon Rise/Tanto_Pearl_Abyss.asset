@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37f204a45dabbee48b69a785b9872b55, type: 3}
+  m_Name: Tanto_Pearl_Abyss
+  m_EditorClassIdentifier: 
+  Name: Pearl Abyss
+  Price: 2700
+  Sprite: {fileID: 21300000, guid: f3e19f9857d57bd4ebe4b11873c9e233, type: 3}
+  RarityType: 5
+  WeaponType: 40
+  Collection: 16

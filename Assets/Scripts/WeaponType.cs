@@ -36,5 +36,13 @@ public enum WeaponType
    M4A1,
    DualDaggers,
    Stiletto,
+   Flip,
+   Kunai,
+   Charm,
+   Sticker,
+   Tanto,
+   Graffiti,
+   Kukri,
+   Fang,
 
 }
