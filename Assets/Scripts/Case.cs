@@ -7,17 +7,13 @@ public class Case : MonoBehaviour
     public List<int> ItemsId;
     public bool isFullSetRarieties;
 
-    public GameObject ItemWindow;
+
 
     public void Open()
     {
         var item = GetItem();
         Inventory.Instance.AddNewItem(item);
         Debug.Log(item.Name + " " + item.RarityType);
-
-        var temp = ItemWindow.GetComponent<ItemWindow>();
-        temp.SetItemInfo(item);
-        temp.UpdateInfo();
     }
 
     public ItemInfo GetItem()
