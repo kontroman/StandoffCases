@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37f204a45dabbee48b69a785b9872b55, type: 3}
-  m_Name: AKR_Railgun
+  m_Name: Dual_Daggers_Demonic_Steel
   m_EditorClassIdentifier: 
-  Name: Railgun
-  Price: 580
-  Sprite: {fileID: 21300000, guid: d987d8f4c95a5a14baef9e7d1b38029f, type: 3}
-  RarityType: 4
-  WeaponType: 25
-  Collection: 0
+  Name: Demonic Steel
+  Price: 1200
+  Sprite: {fileID: 21300000, guid: 0ccf2987159387440b3f101d050c2d6e, type: 3}
+  RarityType: 5
+  WeaponType: 34
+  Collection: 6

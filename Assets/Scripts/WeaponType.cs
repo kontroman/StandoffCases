@@ -27,4 +27,14 @@ public enum WeaponType
    AWM,
    AKR12,
    JPPA,
+   AKR,
+   M9,
+   Karambit,
+   JKommando,
+   Butterfly,
+   Scorpion,
+   M4A1,
+   DualDaggers,
+   Stiletto,
+
 }
