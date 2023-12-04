@@ -11,6 +11,8 @@ public class CaseType : MonoBehaviour
     public string Name;
     public int Price;
     public string NameCaseType;
+    public Case Case;
+    public GameObject casePreview;
 
 
     public MoneyType moneyType;
@@ -38,7 +40,7 @@ public class CaseType : MonoBehaviour
             Destroy(_panel.gameObject);
         }
 
-
         var panel = Instantiate(Resources.Load<GameObject>("OpenPanel"), transform).GetComponent<OpenPanel>();
+        panel.Init(Case, casePreview);
     }
 }

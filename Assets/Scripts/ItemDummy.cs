@@ -9,15 +9,13 @@ public class ItemDummy : MonoBehaviour
     public Image SkinImage;
     public TextMeshProUGUI SkinName;
     public Image RarityImage;
-    public ItemInfo info;
+    public RarityType RarityType;
 
-    private void Awake()
-    {
-        InitDummy(info);
-    }
 
     public void InitDummy(ItemInfo _info)
     {
+        RarityType = _info.RarityType;
+
         SkinImage.sprite = _info.Sprite;
         SkinName.text = "" + _info.Name;
 

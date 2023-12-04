@@ -6,7 +6,7 @@ public class Case : MonoBehaviour
 {
     public List<int> ItemsId;
     public bool isFullSetRarieties;
-
+    public string Name;
 
 
     public void Open()
