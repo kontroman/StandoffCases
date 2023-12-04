@@ -6,7 +6,7 @@ public class ItemDatabase : MonoBehaviour
 {
     public static ItemDatabase Instance { get; set; }
 
-    [SerializeField] private List<ItemInfo> _data = new List<ItemInfo>();
+    public List<ItemInfo> _data = new List<ItemInfo>();
 
     private void Awake()
     {
