@@ -25,4 +25,6 @@ public enum Collections{
     Fireborn,
     SpaceVision,
     Sunstrike,
+    HW2020,
+
 }
