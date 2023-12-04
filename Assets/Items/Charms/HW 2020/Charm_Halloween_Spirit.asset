@@ -16,5 +16,5 @@ MonoBehaviour:
   Price: 750
   Sprite: {fileID: 21300000, guid: ea948690cf8c8c64882cd60f64a4c6c4, type: 3}
   RarityType: 4
-  WeaponType: 0
-  Collection: 0
+  WeaponType: 38
+  Collection: 26

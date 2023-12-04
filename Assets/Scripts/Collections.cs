@@ -26,5 +26,6 @@ public enum Collections{
     SpaceVision,
     Sunstrike,
     HW2020,
+    Splash,
 
 }
