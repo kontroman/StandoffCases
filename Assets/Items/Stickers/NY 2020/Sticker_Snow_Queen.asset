@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37f204a45dabbee48b69a785b9872b55, type: 3}
+  m_Name: Sticker_Snow_Queen
+  m_EditorClassIdentifier: 
+  Name: Snow Queen
+  Price: 73665
+  Sprite: {fileID: 21300000, guid: 8c8e9b0ba8e02bc49a2d0cbe4cb533de, type: 3}
+  RarityType: 5
+  WeaponType: 39
+  Collection: 11
