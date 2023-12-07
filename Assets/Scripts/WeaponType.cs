@@ -44,5 +44,10 @@ public enum WeaponType
    Graffiti,
    Kukri,
    Fang,
+   Case,
+   Box,
+   Stickerpack,
+   Graffitipack,
+   Charmpack,
 
 }
