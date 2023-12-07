@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Case : MonoBehaviour
@@ -7,13 +8,21 @@ public class Case : MonoBehaviour
     public List<int> ItemsId;
     public bool isFullSetRarieties;
     public string Name;
-
+    List<ItemInfo> items = new List<ItemInfo>();
 
     public void Open()
     {
         var item = GetItem();
         Inventory.Instance.AddNewItem(item);
         Debug.Log(item.Name + " " + item.RarityType);
+    }
+
+    public void InitCase()
+    {
+        foreach (var item in ItemsId)
+        {
+            items.Add(ItemDatabase.Instance.GetItemById(item));
+        }
     }
 
     public ItemInfo GetItem()
@@ -32,6 +41,68 @@ public class Case : MonoBehaviour
                 itemPool.Add(item);
         }
         return itemPool;
+    }
+    
+    public ItemInfo GetRandomItem()
+    {
+        InitCase();
+
+        var res = Random.value;
+
+        if (isFullSetRarieties)
+        {
+            if (res < 0.6)
+            {
+                return items.Find(x => x.RarityType == RarityType.Common);
+            }
+            else if (res < 0.75)
+            {
+                return items.Find(x => x.RarityType == RarityType.Uncommon);
+            }
+            else if (res < 0.85)
+            {
+                return items.Find(x => x.RarityType == RarityType.Rare);
+            }
+            else if (res < 0.9)
+            {
+                return items.Find(x => x.RarityType == RarityType.Epic);
+            }
+            else if (res < 0.93)
+            {
+                return items.Find(x => x.RarityType == RarityType.Legendary);
+            }
+            else if (res < 0.94)
+            {
+                return items.Find(x => x.RarityType == RarityType.Arcane);
+            }
+            else
+            {
+                return items.Find(x => x.RarityType == RarityType.Common);
+            }
+        }
+        else
+        {
+            if (res < 0.65)
+            {
+                return items.Find(x => x.RarityType == RarityType.Rare);
+            }
+            else if (res < 0.85)
+            {
+                return items.Find(x => x.RarityType == RarityType.Epic);
+            }
+            else if (res < 0.95)
+            {
+                return items.Find(x => x.RarityType == RarityType.Legendary);
+            }
+            else if (res <= 1)
+            {
+                return items.Find(x => x.RarityType == RarityType.Arcane);
+            }
+            else
+            {
+                return items.Find(x => x.RarityType == RarityType.Rare);
+            }
+        }
     }
 
     private RarityType GetRarityOfItem()

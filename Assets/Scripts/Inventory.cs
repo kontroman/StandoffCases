@@ -10,6 +10,9 @@ public class Inventory : MonoBehaviour
     
     public List<ItemInfo> Items = new List<ItemInfo>();
 
+    public Transform parentView;
+    public GameObject ItemPrefab;
+
     private void Awake()
     {
         if (Instance != null) return;
@@ -19,12 +22,38 @@ public class Inventory : MonoBehaviour
     private void Start()
     {
         UploadInventory();
+
+        ShowItems();
+
+        parentView.GetComponent<RectTransform>().sizeDelta = new Vector2(0, 275 + Items.Count / 4 * 275);
+    }
+
+    public void OnEnable()
+    {
+        ShowItems();
+    }
+
+    private void ShowItems()
+    {
+        foreach(Transform t in parentView.transform)
+        {
+            Destroy(t.gameObject);
+        }
+
+        foreach (var item in Items)
+        {
+            var obj = Instantiate(ItemPrefab, parentView);
+            obj.GetComponent<ItemIcon>().UpdateInfo(item);
+        }
     }
 
     public void AddNewItem(ItemInfo newItem)
     {
         Items.Add(newItem);
         SaveInventory();
+        parentView.GetComponent<RectTransform>().sizeDelta = new Vector2(0, 275 + Items.Count / 4 * 275);
+
+        ShowItems();
     }
 
     public void DeleteItem(ItemInfo item)

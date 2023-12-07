@@ -15,6 +15,7 @@ public class OpenPanel : MonoBehaviour
         _go = casePreview;
         _case = Case;
         Look.onClick.AddListener(LookCase);
+        Buy.onClick.AddListener(BuyCase);
     }
 
     public void LookCase()
@@ -26,4 +27,8 @@ public class OpenPanel : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void BuyCase()
+    {
+
+    }
 }

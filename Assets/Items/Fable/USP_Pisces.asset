@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f204a45dabbee48b69a785b9872b55, type: 3}
   m_Name: USP_Pisces
   m_EditorClassIdentifier: 
+  Id: 95
   Name: Pisces
   Price: 2.2
-  Sprite: {fileID: 0}
+  Sprite: {fileID: 21300000, guid: ccf7dfa73fb65ad4db09252376d8fe27, type: 3}
   RarityType: 3
   WeaponType: 0
   Collection: 3

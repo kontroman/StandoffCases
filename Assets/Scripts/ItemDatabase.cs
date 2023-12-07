@@ -12,6 +12,11 @@ public class ItemDatabase : MonoBehaviour
     {
         if (Instance != null) return;
         else Instance = this;
+
+        for(int i = 0; i < _data.Count; i++)
+        {
+            _data[i].Id = i;
+        }
     }
 
     public ItemInfo GetItemById(int id)

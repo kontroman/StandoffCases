@@ -14,12 +14,22 @@ public class CasePreview : MonoBehaviour
     public Transform PreviewParent;
     public Case TestCase;
     public GameObject ButtonsPanel;
+    public GameObject ShopPanel;
 
     List<ItemDummy> dummies = new List<ItemDummy>();
 
     private void OnEnable()
     {
         ButtonsPanel.SetActive(false);
+        ButtonsPanel.SetActive(false);
+    }
+
+    public void OnDisable()
+    {
+        foreach (var item in dummies)
+        {
+            Destroy(item.gameObject);
+        }
     }
 
     public void InitPreview(Case _case)

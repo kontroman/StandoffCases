@@ -10,6 +10,8 @@ public class InventoryIconsController : MonoBehaviour
 
     public void UpdateIcons()
     {
+        return;
+
         int _index = 0;
 
         foreach (ItemIcon icon in ItemIcons)
@@ -32,7 +34,7 @@ public class InventoryIconsController : MonoBehaviour
             foreach (ItemIcon icon in ItemIcons)
                 icon.gameObject.SetActive(false);
 
-            UpdateIcons();
+            //UpdateIcons();
         }
     }
 
@@ -45,7 +47,7 @@ public class InventoryIconsController : MonoBehaviour
             foreach (ItemIcon icon in ItemIcons)
                 icon.gameObject.SetActive(false);
 
-            UpdateIcons();
+            //UpdateIcons();
         }
     }
 }

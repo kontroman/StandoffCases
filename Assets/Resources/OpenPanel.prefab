@@ -372,7 +372,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 10}
+  m_AnchoredPosition: {x: 0, y: 141}
   m_SizeDelta: {x: 265.1, y: 101.5188}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6213530713881068147
@@ -428,6 +428,7 @@ MonoBehaviour:
   Buy: {fileID: 6879884116578916263}
   Look: {fileID: 3457177298264120580}
   _case: {fileID: 0}
+  _go: {fileID: 0}
 --- !u!1 &6213530713909351102
 GameObject:
   m_ObjectHideFlags: 0
