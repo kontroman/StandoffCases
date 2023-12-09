@@ -9,6 +9,8 @@ public class Case : MonoBehaviour
     public bool isFullSetRarieties;
     public string Name;
     List<ItemInfo> items = new List<ItemInfo>();
+    public bool addToBoxStatistic;
+    public bool addToCaseStatistic;
 
     public void Open()
     {

@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f204a45dabbee48b69a785b9872b55, type: 3}
   m_Name: JKommando_Reaper
   m_EditorClassIdentifier: 
-  Name: 
-  Price: 0
-  Sprite: {fileID: 0}
+  Id: 60
+  Name: Reaper
+  Price: 1800
+  Sprite: {fileID: 21300000, guid: 64e8edb7be0a98b41a32efd0efe9333e, type: 3}
   RarityType: 5
   WeaponType: 30
   Collection: 2

@@ -146,6 +146,12 @@ public class CaseOpening : MonoBehaviour
         }
 
         Inventory.Instance.AddNewItem(ItemToGive);
+        StatisticManager.Instance.UpdateRarityStatistic(ItemToGive.RarityType);
+        StatisticManager.Instance.UpdateTypeOfWeaponStatistic(ItemToGive.WeaponType);
+        if (TestCase.addToBoxStatistic)
+            StatisticManager.Instance.UpdateOpenCaseStatistic(WeaponType.Box);
+        if (TestCase.addToCaseStatistic)
+            StatisticManager.Instance.UpdateOpenCaseStatistic(WeaponType.Case);
         HideWindow();
     }
 

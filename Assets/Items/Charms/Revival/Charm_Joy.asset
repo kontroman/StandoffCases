@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f204a45dabbee48b69a785b9872b55, type: 3}
   m_Name: Charm_Joy
   m_EditorClassIdentifier: 
+  Id: 659
   Name: Joy
   Price: 0
-  Sprite: {fileID: 0}
+  Sprite: {fileID: 21300000, guid: 8716ec131da59d547983f78a2c12a675, type: 3}
   RarityType: 5
   WeaponType: 38
   Collection: 13

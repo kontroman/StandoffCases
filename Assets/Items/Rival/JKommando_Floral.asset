@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f204a45dabbee48b69a785b9872b55, type: 3}
   m_Name: JKommando_Floral
   m_EditorClassIdentifier: 
-  Name: 
-  Price: 0
-  Sprite: {fileID: 0}
+  Id: 58
+  Name: Floral
+  Price: 2900
+  Sprite: {fileID: 21300000, guid: 2474f5da731be454ca12a5dba6927bca, type: 3}
   RarityType: 5
   WeaponType: 30
   Collection: 2

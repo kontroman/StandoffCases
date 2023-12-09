@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f204a45dabbee48b69a785b9872b55, type: 3}
   m_Name: SM1014_Bolt
   m_EditorClassIdentifier: 
+  Id: 165
   Name: Bolt
   Price: 0.07
-  Sprite: {fileID: 0}
+  Sprite: {fileID: 21300000, guid: 6427fee3d076a10469fb3311ed31e92d, type: 3}
   RarityType: 0
   WeaponType: 5
   Collection: 6

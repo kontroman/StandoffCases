@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f204a45dabbee48b69a785b9872b55, type: 3}
   m_Name: Sticker_Evil_Pumpkin
   m_EditorClassIdentifier: 
+  Id: 444
   Name: Evil Pumpkin
   Price: 907
-  Sprite: {fileID: 0}
+  Sprite: {fileID: 21300000, guid: c0defa46b830a724488b0abec03cfa89, type: 3}
   RarityType: 2
   WeaponType: 39
   Collection: 28

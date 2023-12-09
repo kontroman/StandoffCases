@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f204a45dabbee48b69a785b9872b55, type: 3}
   m_Name: AKR12_Steam_Beast
   m_EditorClassIdentifier: 
-  Name: 
-  Price: 0
-  Sprite: {fileID: 0}
+  Id: 144
+  Name: Steam Beast
+  Price: 3
+  Sprite: {fileID: 21300000, guid: 9ff2c9bba58d4f240a0c1270d58fcb8f, type: 3}
   RarityType: 3
   WeaponType: 25
   Collection: 6
