@@ -4,7 +4,6 @@ using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class CasePreview : MonoBehaviour
 {
