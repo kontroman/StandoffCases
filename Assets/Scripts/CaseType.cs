@@ -14,7 +14,6 @@ public class CaseType : MonoBehaviour
     public Case Case;
     public GameObject casePreview;
 
-
     public MoneyType moneyType;
 
     public TextMeshProUGUI TextName;
@@ -41,6 +40,6 @@ public class CaseType : MonoBehaviour
         }
 
         var panel = Instantiate(Resources.Load<GameObject>("OpenPanel"), transform).GetComponent<OpenPanel>();
-        panel.Init(Case, casePreview);
+        panel.Init(Case, casePreview, this);
     }
 }

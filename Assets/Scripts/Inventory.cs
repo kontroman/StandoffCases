@@ -10,6 +10,8 @@ public class Inventory : MonoBehaviour
     
     public List<ItemInfo> Items = new List<ItemInfo>();
 
+    public CaseOpening CaseOpening;
+
     public Transform parentView;
     public GameObject ItemPrefab;
 
@@ -25,12 +27,23 @@ public class Inventory : MonoBehaviour
 
         ShowItems();
 
-        parentView.GetComponent<RectTransform>().sizeDelta = new Vector2(0, 275 + Items.Count / 4 * 275);
+        parentView.GetComponent<RectTransform>().sizeDelta = new Vector2(0, 168 + Items.Count / 4 * 168);
     }
 
     public void OnEnable()
     {
         ShowItems();
+    }
+
+    public void DeleteItemBy(ItemInfo info)
+    {
+        if (Items.Contains(info))
+        {
+            Destroy(Items.Find(x => x == info));
+            Items.Remove(info);
+        }
+
+        SaveInventory();
     }
 
     private void ShowItems()

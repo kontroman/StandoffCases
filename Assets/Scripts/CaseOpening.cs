@@ -10,6 +10,7 @@ public class CaseOpening : MonoBehaviour
     public TextMeshProUGUI CaseName;
     public GameObject ItemPreviewPrefab;
     public GameObject ItemPreviewPrefab2;
+    public GameObject Notific;
     public ItemDatabase Database;
     public Transform PreviewParent;
     public Transform PreviewParent2;
@@ -17,6 +18,11 @@ public class CaseOpening : MonoBehaviour
     public GameObject ButtonsPanel;
     public Scrollbar scrollbar;
     public GameObject button;
+
+    public GameObject invento1;
+    public GameObject invento2;
+
+    public AudioSource roulette;
 
     List<ItemDummy> dummies = new List<ItemDummy>();
 
@@ -27,10 +33,13 @@ public class CaseOpening : MonoBehaviour
         ButtonsPanel.SetActive(false);
     }
 
-    private void Start()
+    private void OnDisable()
     {
-        Init(TestCase);
-        InitPreview(TestCase);
+        foreach (var item in dummies)
+        {
+            Destroy(item.gameObject);
+        }
+        dummies.Clear();
     }
 
     public void Init(Case _case)
@@ -39,6 +48,7 @@ public class CaseOpening : MonoBehaviour
         TestCase = _case;
         button.gameObject.SetActive(true);
 
+        InitPreview(TestCase);
         CreateItems();
     }
 
@@ -56,7 +66,7 @@ public class CaseOpening : MonoBehaviour
             var obj = Instantiate(ItemPreviewPrefab, PreviewParent);
             obj.GetComponent<OpeningItem>().Init(item);
 
-            if(i == 45)
+            if(i == 44)
             {
                 ItemToGive = item;
             }
@@ -90,6 +100,7 @@ public class CaseOpening : MonoBehaviour
     {
         button.SetActive(false);
         StartCoroutine(Open());
+        roulette.Play();
     }
 
     private IEnumerator Open()
@@ -152,11 +163,31 @@ public class CaseOpening : MonoBehaviour
             StatisticManager.Instance.UpdateOpenCaseStatistic(WeaponType.Box);
         if (TestCase.addToCaseStatistic)
             StatisticManager.Instance.UpdateOpenCaseStatistic(WeaponType.Case);
+
+
+        var obj = Instantiate(Notific, GameObject.Find("Canvas").transform);
+        obj.GetComponent<notification>().Init(ItemToGive);
+
+        yield return new WaitForSeconds(1f);
         HideWindow();
     }
 
     public void HideWindow()
     {
+        dummies.ForEach(x => Destroy(x.gameObject));
+        dummies.Clear();
+        scrollbar.value = 0;
+        ItemToGive = null;
+
+        foreach(Transform t in PreviewParent)
+        {
+            Destroy(t.gameObject);
+        }
+
+        Inventory.Instance.DeleteItemBy(TestCase.caseItemInfo);
+
+        invento1.SetActive(true);
+        invento2.SetActive(true);
         ButtonsPanel.SetActive(true);
         gameObject.SetActive(false);
     }

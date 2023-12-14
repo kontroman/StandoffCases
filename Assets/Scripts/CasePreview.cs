@@ -12,8 +12,10 @@ public class CasePreview : MonoBehaviour
     public ItemDatabase Database;
     public Transform PreviewParent;
     public Case TestCase;
+    public CaseType TypeCase;
     public GameObject ButtonsPanel;
     public GameObject ShopPanel;
+    public GameObject BuyMenu;
 
     List<ItemDummy> dummies = new List<ItemDummy>();
 
@@ -29,10 +31,13 @@ public class CasePreview : MonoBehaviour
         {
             Destroy(item.gameObject);
         }
+
+        dummies.Clear();
     }
 
-    public void InitPreview(Case _case)
+    public void InitPreview(Case _case, CaseType type)
     {
+        TypeCase = type;
         CaseName.text = _case.Name;
 
         foreach(int i in _case.ItemsId)
@@ -52,5 +57,11 @@ public class CasePreview : MonoBehaviour
         {
             item.transform.SetParent(PreviewParent);
         }
+    }
+
+    public void BuyButton()
+    {
+        var obj = Instantiate(BuyMenu, GameObject.Find("Canvas").transform);
+        obj.GetComponentInChildren<BuyWindow>().Init(TypeCase);
     }
 }

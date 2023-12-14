@@ -9,10 +9,16 @@ public class MarketObj : MonoBehaviour
     public Image gunImage;
     public Image Rarity;
     public TextMeshProUGUI Name;
+    public string GunName;
     public TextMeshProUGUI Price;
+    public GameObject BuyMenul;
+    public ItemInfo itemInfo;
 
     public void Init(ItemInfo info)
     {
+        itemInfo = info;
+        GetComponent<Button>().onClick.AddListener(BuyMenu);
+
         if (info.WeaponType == WeaponType.Case ||
             info.WeaponType == WeaponType.Box ||
             info.WeaponType == WeaponType.Charmpack ||
@@ -24,6 +30,7 @@ public class MarketObj : MonoBehaviour
         }
         gunImage.sprite = info.Sprite;
         Name.text = info.Name;
+        GunName = info.Name;
         Price.text = "G " + info.Price;
 
         Color color = Color.white;
@@ -54,5 +61,11 @@ public class MarketObj : MonoBehaviour
         }
 
         Rarity.color = color;
+    }
+
+    private void BuyMenu()
+    {
+        var obj = Instantiate(BuyMenul, GameObject.Find("Canvas").transform);
+        obj.GetComponentInChildren<BuyItemFromMarket>().Init(itemInfo);
     }
 }

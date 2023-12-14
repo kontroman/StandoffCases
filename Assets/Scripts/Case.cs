@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Case : MonoBehaviour
 {
+    public ItemInfo caseItemInfo;
     public List<int> ItemsId;
     public bool isFullSetRarieties;
     public string Name;
@@ -44,10 +45,12 @@ public class Case : MonoBehaviour
         }
         return itemPool;
     }
-    
+
     public ItemInfo GetRandomItem()
     {
         InitCase();
+
+        items.Shuffle();
 
         var res = Random.value;
 
@@ -169,4 +172,20 @@ public class Case : MonoBehaviour
     }
 
 
+}
+
+public static class ListExtensions
+{
+    public static void Shuffle<T>(this IList<T> list)
+    {
+        int n = list.Count;
+        while (n > 1)
+        {
+            n--;
+            int k = Random.Range(0, n + 1);
+            T value = list[k];
+            list[k] = list[n];
+            list[n] = value;
+        }
+    }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
+using System.Linq;
 
 public class ItemIcon : MonoBehaviour, IPointerClickHandler
 {
@@ -24,7 +25,7 @@ public class ItemIcon : MonoBehaviour, IPointerClickHandler
 
     private void ChoosePanelColor()
     {
-        switch(_itemInfo.RarityType)
+        switch (_itemInfo.RarityType)
         {
             case RarityType.Common:
                 NamePanel.color = RarityColors.Instance.CommonColor;
@@ -45,13 +46,30 @@ public class ItemIcon : MonoBehaviour, IPointerClickHandler
                 NamePanel.color = RarityColors.Instance.ArcaneColor;
                 return;
             case RarityType.Gold:
-                NamePanel.color = RarityColors.Instance.ArcaneColor;
+                NamePanel.color = RarityColors.Instance.GoldColor;
                 return;
         }
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        WindowManager.Instance.ShowItemWindow(_itemInfo);
+        if (_itemInfo.WeaponType == WeaponType.Case ||
+            _itemInfo.WeaponType == WeaponType.Charmpack ||
+            _itemInfo.WeaponType == WeaponType.Stickerpack ||
+            _itemInfo.WeaponType == WeaponType.Graffitipack ||
+            _itemInfo.WeaponType == WeaponType.Box)
+        {
+            List<Case> list = new List<Case>();
+
+            list = FindObjectsOfType<Case>().ToList();
+
+            Inventory.Instance.CaseOpening.gameObject.SetActive(true);
+            Inventory.Instance.CaseOpening.Init(list.Find(x => x.caseItemInfo == _itemInfo));
+            GameObject.Find("InventoryPage").SetActive(false);
+        }
+        else
+        {
+            WindowManager.Instance.ShowItemWindow(_itemInfo);
+        }
     }
 }

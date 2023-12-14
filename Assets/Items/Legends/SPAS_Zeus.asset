@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f204a45dabbee48b69a785b9872b55, type: 3}
   m_Name: SPAS_Zeus
   m_EditorClassIdentifier: 
+  Id: 356
   Name: Zeus
-  Price: 0
+  Price: 30
   Sprite: {fileID: 21300000, guid: f0d456a319a42e54aa9577b1362edcc1, type: 3}
   RarityType: 3
   WeaponType: 4
